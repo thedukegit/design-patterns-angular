@@ -1,0 +1,14 @@
+<div class="page">
+  <div class="traffic-light-container">
+    <div class="traffic-light">
+      <div [class.active]="trafficLight.state.color === 'red'" class="light red"></div>
+      <div [class.active]="trafficLight.state.color === 'yellow'" class="light yellow"></div>
+      <div [class.active]="trafficLight.state.color === 'green'" class="light green"></div>
+    </div>
+    <div class="button-container">
+      <button (click)="changeLight()" mat-button>Change light</button>
+      <hr/>
+      <div><span>Current sound: {{ trafficLight.state.sound }}</span></div>
+    </div>
+  </div>
+</div>

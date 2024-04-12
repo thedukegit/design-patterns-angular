@@ -1,0 +1,93 @@
+
+.page {
+  background: #292929;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.traffic-light-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.button-container {
+  margin-left: 20px;
+}
+
+.button-container button {
+  color: #ffffff; /* White text color */
+  background-color: #444444; /* Dark gray background */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* Add transition effect */
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #555555; /* Lighten the background on hover */
+  color: #eeeeee; /* Lighten the text color on hover */
+}
+
+.button-container span, .timer {
+  color: #ffffff; /* White text color */
+}
+
+.button-container button:active {
+  background-color: #ddd;
+}
+
+.light {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.red {
+  background: #800000;
+}
+
+.yellow {
+  background: #808000;
+}
+
+.green {
+  background: #008000;
+}
+
+.active.red {
+  background: #ff0000;
+}
+
+.active.yellow {
+  background: #ffff00;
+}
+
+.active.green {
+  background: #00ff00;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  width: 100px;
+}

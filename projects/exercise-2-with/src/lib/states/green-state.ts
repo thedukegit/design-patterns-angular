@@ -2,6 +2,7 @@ import {TrafficLight} from "../models/traffic-light";
 import {StateInterface} from "../interfaces/state.interface";
 import {LightColor} from "../light-color.enum";
 import {Sound} from "../sound.enum";
+import {signal, Signal} from "@angular/core";
 
 export class GreenState implements StateInterface {
   private trafficLight: TrafficLight
@@ -18,12 +19,16 @@ export class GreenState implements StateInterface {
     return Sound.GoGoGo;
   }
 
-  public get timer(): number {
-    return 1500;
+  public get timer(): Signal<number> {
+    return signal(1500);
   }
 
   public changeLight(): void {
-    this.trafficLight.state = this.trafficLight.getYellowState();
+    console.log('changing to: ', this.color);
+    setTimeout(() => {
+      this.trafficLight.state = this.trafficLight.getYellowState();
+      this.trafficLight.changeLight();
+    }, this.timer());
   }
 
 }

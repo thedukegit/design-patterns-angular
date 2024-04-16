@@ -26,7 +26,6 @@ export class TrafficLight {
   }
 
   public changeLight() {
-    console.log('traffic light: change light');
     this.currentState.changeLight();
   }
 

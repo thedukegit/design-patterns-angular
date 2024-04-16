@@ -18,9 +18,7 @@ export class Exercise2WithComponent implements OnInit {
   protected trafficLight: TrafficLight = inject(TrafficLight);
 
   public ngOnInit(): void {
-    setInterval(() => {
-      this.changeLight();
-    }, 3000); // switch light every 3 seconds
+    this.changeLight();
   }
 
   protected changeLight() {

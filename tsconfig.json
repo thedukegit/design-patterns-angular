@@ -4,6 +4,20 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "strict": true,
+<<<<<<< Updated upstream
+=======
+    "paths": {
+      "exercise-2-with": [
+        "./dist/exercise-2-with"
+      ],
+      "exercise-3-without": [
+        "./dist/exercise-3-without"
+      ],
+      "exercise-4-without": [
+        "./dist/exercise-4-without"
+      ]
+    },
+>>>>>>> Stashed changes
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

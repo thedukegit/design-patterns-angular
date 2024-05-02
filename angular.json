@@ -96,6 +96,108 @@
           }
         }
       }
+<<<<<<< Updated upstream
+=======
+    },
+    "exercise-2-with": {
+      "projectType": "library",
+      "root": "projects/exercise-2-with",
+      "sourceRoot": "projects/exercise-2-with/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/exercise-2-with/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/exercise-2-with/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/exercise-2-with/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/exercise-2-with/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "exercise-3-without": {
+      "projectType": "library",
+      "root": "projects/exercise-3-without",
+      "sourceRoot": "projects/exercise-3-without/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/exercise-3-without/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/exercise-3-without/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/exercise-3-without/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/exercise-3-without/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "exercise-4-without": {
+      "projectType": "library",
+      "root": "projects/exercise-4-without",
+      "sourceRoot": "projects/exercise-4-without/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/exercise-4-without/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/exercise-4-without/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/exercise-4-without/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/exercise-4-without/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+>>>>>>> Stashed changes
     }
   }
 }

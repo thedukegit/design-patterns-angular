@@ -8,6 +8,9 @@
       "exercise-2-with": [
         "./dist/exercise-2-with"
       ],
+      "exercise-3-with": [
+        "./dist/exercise-3-with"
+      ],
       "exercise-3-without": [
         "./dist/exercise-3-without"
       ]

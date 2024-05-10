@@ -1,8 +1,12 @@
-<div>
-  <mat-select (selectionChange)="navigateToComponent($event.value)" class="mat-select-panel">
-    @for (component of components; track $index) {
-      <mat-option class="mat-option" [value]="component">{{ component.name }}</mat-option>
-    }
-  </mat-select>
+<div class="exercise-selector">
+  <mat-form-field>
+    <mat-label>Select exercise</mat-label>
+    <mat-select (selectionChange)="navigateToComponent($event.value)">
+      @for (component of components; track $index) {
+        <mat-option [value]="component">{{ component.name }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
 </div>
+
 <router-outlet></router-outlet>

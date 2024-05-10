@@ -1,0 +1,12 @@
+<button (click)="createRandom()" mat-flat-button>Create Random Asteroid</button
+>&nbsp;
+<button (click)="createSmall()" mat-flat-button>Create small Asteroid</button
+>&nbsp;
+<button (click)="createMedium()" mat-flat-button>Create medium Asteroid</button
+>&nbsp;
+<button (click)="createLarge()" mat-flat-button>Create large Asteroid</button
+>&nbsp;
+
+@if (asteroid) {
+  <p>{{ asteroid.getMessage() }}</p>
+}

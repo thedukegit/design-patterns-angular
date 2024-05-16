@@ -1,1 +1,28 @@
-<p>document-manager works!</p>
+<div class="button-row">
+  <button (click)="login(jim)" color="primary" mat-flat-button>
+    {{ jim.name }}
+  </button>
+  <button (click)="login(bel)" color="primary" mat-flat-button>
+    {{ bel.name }}
+  </button>
+  <button (click)="login(ushi)" color="primary" mat-flat-button>
+    {{ ushi.name }}
+  </button>
+  @if (selectedUser) {
+    <span
+      >{{ selectedUser.name }} is logged in and has access level
+      {{ selectedUser.accessLevel }}</span
+    >
+  }
+</div>
+<br />
+<div class="button-row">
+  <button (click)="readDoc(1)" color="accent" mat-flat-button>Doc 1</button>
+  <button (click)="readDoc(2)" color="accent" mat-flat-button>Doc 2</button>
+  <button (click)="readDoc(3)" color="accent" mat-flat-button>Doc 3</button>
+</div>
+<br />
+@if (selectedDoc) {
+  <div>{{ selectedDoc | json }}</div>
+}
+<div>{{ error }}</div>

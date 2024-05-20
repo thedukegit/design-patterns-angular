@@ -1,0 +1,75 @@
+<mat-tab-group (selectedTabChange)="reset()">
+  <mat-tab label="No access control">
+    <div class="tab">
+      <div class="container">
+        <lib-user-list
+          (onLogin)="loginUser($event)"
+          [users]="users"
+        ></lib-user-list>
+        <lib-document-list
+          (onRead)="readDocument($event)"
+          [documents]="documents"
+        >
+        </lib-document-list>
+        <div class="action">
+          <span>document.read()</span>
+          <span class="arrow material-icons"> trending_flat </span>
+        </div>
+        <div class="document-column">
+          <mat-card>
+            <mat-card-content>
+              <div>Document</div>
+              <hr />
+              <span>read()</span>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div>{{ userName }}</div>
+    <div>{{ documentContent }}</div>
+  </mat-tab>
+  <mat-tab class="tab" label="With access control">
+    <div class="tab">
+      <div class="container">
+        <lib-user-list
+          (onLogin)="loginUser($event)"
+          [users]="users"
+        ></lib-user-list>
+        <lib-document-proxy
+          (onRead)="readDocument($event)"
+          [documents]="documents"
+        >
+        </lib-document-proxy>
+        <div class="action">
+          <span>document.read()</span>
+          <span class="arrow material-icons"> trending_flat </span>
+        </div>
+        <div class="document-column">
+          <mat-card>
+            <mat-card-content>
+              <div>Document Proxy</div>
+              <hr />
+              <span>read()</span>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="action">
+          <span>realDocument.read()</span>
+          <span class="arrow material-icons"> trending_flat </span>
+        </div>
+        <div class="document-column">
+          <mat-card>
+            <mat-card-content>
+              <div>Real Document</div>
+              <hr />
+              <span>read()</span>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div>{{ userName }}</div>
+    <div>{{ documentContent }}</div>
+  </mat-tab>
+</mat-tab-group>

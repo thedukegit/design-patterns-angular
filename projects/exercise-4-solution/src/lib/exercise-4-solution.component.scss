@@ -1,0 +1,23 @@
+
+.tab {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+lib-user-list {
+  margin-right: 10px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em 0 1em;
+}

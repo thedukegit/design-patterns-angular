@@ -8,4 +8,8 @@ export abstract class Ship {
   public fire(): string {
     return 'Aim at asteroid and fire weapons';
   }
+
+  public shield(): string {
+    return 'Turn on shield generator and raise shields';
+  }
 }

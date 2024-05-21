@@ -6,4 +6,8 @@ export class Interceptor extends Ship {
   constructor() {
     super();
   }
+
+  public override shield(): string {
+    return 'No shield available';
+  }
 }

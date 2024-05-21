@@ -1,15 +1,9 @@
 export abstract class Ship {
   public name: string = '';
 
-  public fly(): string {
-    return 'Turning on engines and moving in desired direction';
-  }
+  abstract fly(): string;
 
-  public fire(): string {
-    return 'Aim at asteroid and fire weapons';
-  }
+  abstract fire(): string;
 
-  public shield(): string {
-    return 'Turn on shield generator and raise shields';
-  }
+  abstract raiseShields(): string;
 }

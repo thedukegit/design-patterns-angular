@@ -1,0 +1,16 @@
+<div class="card-container">
+  @for (ship of ships; track ship) {
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ ship.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <ul>
+          <li>{{ ship.performFlyAbility() }}</li>
+          <li>{{ ship.performFireAbility() }}</li>
+          <li>{{ ship.performRaiseShieldsAbility() }}</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>

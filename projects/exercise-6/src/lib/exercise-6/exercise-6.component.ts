@@ -3,8 +3,6 @@ import { Player } from '../models/player';
 import { Level } from '../models/level.base';
 import { SpaceLevel } from '../models/space-level';
 import { MatButton } from '@angular/material/button';
-import { Score } from '../models/score';
-import { Lives } from '../models/lives';
 import { EarthLevel } from '../models/earth-level';
 
 @Component({
@@ -16,14 +14,10 @@ import { EarthLevel } from '../models/earth-level';
 })
 export class Exercise6Component implements OnInit {
   protected readonly player: Player = new Player('Marlin');
-  protected readonly score: Score = new Score();
-  protected readonly lives: Lives = new Lives();
   private currentLevel: Level;
 
   public constructor() {
     this.currentLevel = new SpaceLevel(this.player);
-    this.currentLevel.ui.push(this.score);
-    this.currentLevel.ui.push(this.lives);
   }
 
   public get level(): Level {
@@ -39,8 +33,8 @@ export class Exercise6Component implements OnInit {
     this.currentLevel = level;
   }
 
-  protected shoot() {
-    this.score.increase();
+  protected shoot(): void {
+    this.currentLevel.shoot();
   }
 
   private startGameLoop(): void {
@@ -49,25 +43,15 @@ export class Exercise6Component implements OnInit {
 
     const gameLoop = (timestamp: number) => {
       if (timestamp - lastTimestamp >= interval) {
-        this.changeLives();
+        this.currentLevel.changeLives(); //simulate gaining and losing lives
         lastTimestamp = timestamp;
       }
-      if (this.score.get() === 100) {
+      if (this.currentLevel.isFinished()) {
         const newLevel = new EarthLevel(this.player);
-        newLevel.ui.push(this.score);
-        newLevel.ui.push(this.lives);
         this.loadLevel(newLevel);
       }
       requestAnimationFrame(gameLoop);
     };
     requestAnimationFrame(gameLoop);
-  }
-
-  private changeLives() {
-    if (Math.random() > 0.5) {
-      this.lives.addLife();
-    } else {
-      this.lives.removeLife();
-    }
   }
 }

@@ -8,8 +8,8 @@ export class EarthLevel extends Level {
     Level: ${this.name},
     player: ${this.player.render()},
     enemies: ${this.enemies.length},
-    ${this.ui[0].render()}
-    ${this.ui[1].render()}
+    ${Level.score.render()}
+    ${Level.lives.render()}
     `;
   }
 

@@ -4,6 +4,7 @@ import { DummyComponent } from './dummy.component';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatOption, MatSelect } from '@angular/material/select';
 import { Exercise7SolutionComponent } from '../../projects/exercise-7-solution/src/lib/exercise-7-solution.component';
+import { Exercise8SolutionComponent } from '../../projects/exercise-8-solution/src/lib/exercise-8-solution.component';
 
 interface ComponentInterface {
   name: string;
@@ -30,6 +31,11 @@ export class AppComponent {
       name: 'Exercise 7 solution',
       component: Exercise7SolutionComponent,
       path: 'exercise-7-solution',
+    },
+    {
+      name: 'Exercise 8 solution',
+      component: Exercise8SolutionComponent,
+      path: 'exercise-8-solution',
     },
   ];
   private readonly router: Router = inject(Router);

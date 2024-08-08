@@ -1,0 +1,23 @@
+<div [formGroup]="formGroup" class="properties">
+  <mat-form-field>
+    <mat-label>Size</mat-label>
+    <input formControlName="size" matInput placeholder="Size" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Speed</mat-label>
+    <input formControlName="speed" matInput placeholder="Speed" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Durability</mat-label>
+    <input formControlName="durability" matInput placeholder="Durability" />
+  </mat-form-field>
+</div>
+<div>
+  <button (click)="create()" mat-flat-button>Create</button>
+</div>
+<br />
+<br />
+<br />
+@for (asteroid of asteroids; track asteroid) {
+  {{ asteroid.toString() }}<br />
+}

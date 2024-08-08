@@ -1,0 +1,17 @@
+.properties {
+  display: flex;
+  justify-content: space-between;
+}
+
+.properties mat-form-field {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.properties mat-form-field:first-child {
+  margin-left: 0;
+}
+
+.properties mat-form-field:last-child {
+  margin-right: 0;
+}

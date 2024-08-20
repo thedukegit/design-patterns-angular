@@ -20,4 +20,11 @@ export const routes: Routes = [
         (c) => c.Exercise10Component,
       ),
   },
+  {
+    path: 'exercise-9-solution',
+    loadComponent: () =>
+      import(
+        '../../projects/exercise-9-solution/src/lib/exercise-9-solution.component'
+      ).then((c) => c.Exercise9SolutionComponent),
+  },
 ];

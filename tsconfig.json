@@ -8,6 +8,9 @@
       "exercise-10": [
         "./dist/exercise-10"
       ],
+      "exercise-9-solution": [
+        "./dist/exercise-9-solution"
+      ],
       "exercise-template": [
         "./dist/exercise-template"
       ]

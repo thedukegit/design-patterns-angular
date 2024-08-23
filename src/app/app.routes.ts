@@ -14,10 +14,10 @@ export const routes: Routes = [
       ).then((c) => c.ExerciseTemplateComponent),
   },
   {
-    path: 'exercise-10',
+    path: 'exercise-10-solution',
     loadComponent: () =>
-      import('../../projects/exercise-10/src/lib/exercise-10.component').then(
-        (c) => c.Exercise10Component,
-      ),
+      import(
+        '../../projects/exercise-10-solution/src/lib/exercise-10-solution.component'
+      ).then((c) => c.Exercise10SolutionComponent),
   },
 ];

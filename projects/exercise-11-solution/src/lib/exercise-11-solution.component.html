@@ -5,11 +5,15 @@
 <br/>
 <button mat-flat-button (click)="destroy()">destroy</button>
 <br/>
-<button mat-flat-button (click)="reload()">reload</button>
+<!--<button mat-flat-button (click)="reload()">reload</button>-->
 <br>
 Ship
 {{ myShip | json }}
 
 <br>
-Save state
-{{ saveState | json }}
+Saved states
+@for (savedState of savedStates; track $index) {
+  <br/>
+  {{ savedState| json }}
+  <button mat-flat-button (click)="reload($index)">restore</button>
+}

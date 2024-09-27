@@ -41,6 +41,6 @@ export class Exercise11SolutionComponent {
 
   public reload(index: number): void {
     if (!this.myShip) this.myShip = new Ship(); // recreate the ship if its destroyed
-    this.myShip.shields = this.savedStates[index].getState(); // here it restores the state
+    this.myShip.restoreMemento(this.savedStates[index]); // here it restores the state
   }
 }

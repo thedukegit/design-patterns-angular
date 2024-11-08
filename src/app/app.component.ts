@@ -1,9 +1,10 @@
-import { Component, inject } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-import { DummyComponent } from './dummy.component';
-import { MatFormField, MatLabel } from '@angular/material/form-field';
-import { MatOption, MatSelect } from '@angular/material/select';
-import { ExerciseTemplateComponent } from '../../projects/exercise-template/src/lib/exercise-template.component';
+import {Component, inject} from '@angular/core';
+import {Router, RouterOutlet} from '@angular/router';
+import {DummyComponent} from './dummy.component';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatOption, MatSelect} from '@angular/material/select';
+import {ExerciseTemplateComponent} from '../../projects/exercise-template/src/lib/exercise-template.component';
+import {Exercise14SolutionComponent} from "../../projects/exercise-14-solution/src/lib/exercise-14-solution.component";
 
 interface ComponentInterface {
   name: string;
@@ -30,6 +31,11 @@ export class AppComponent {
       name: 'Exercise template',
       component: ExerciseTemplateComponent,
       path: 'exercise-template',
+    },
+    {
+      name: 'Exercise 14 solution',
+      component: Exercise14SolutionComponent,
+      path: 'exercise-14-solution',
     },
   ];
   private readonly router: Router = inject(Router);

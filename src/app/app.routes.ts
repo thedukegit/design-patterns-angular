@@ -14,6 +14,13 @@ export const routes: Routes = [
         ).then((c) => c.ExerciseTemplateComponent),
   },
   {
+    path: 'exercise-14-solution',
+    loadComponent: () =>
+      import(
+        '../../projects/exercise-14-solution/src/lib/exercise-14-solution.component'
+        ).then((c) => c.Exercise14SolutionComponent),
+  },
+  {
     path: 'exercise-15-solution',
     loadComponent: () =>
       import(

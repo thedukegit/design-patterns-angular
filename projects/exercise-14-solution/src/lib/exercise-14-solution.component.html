@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Enter name" formControlName="name">
+  </mat-form-field>
+  &nbsp;
+  <button mat-flat-button>Create</button>
+</form>
+
+<h1>Prototype</h1>
+{{ prototypeAsteroid.name }}
+<br>
+{{ prototypeAsteroid.type }}
+
+<h1>Clones</h1>
+@for (asteroid of asteroids; track asteroid.name) {
+  {{ asteroid.name }}
+  <br>
+  {{ asteroid.type }}
+  <br>
+  <br>
+}

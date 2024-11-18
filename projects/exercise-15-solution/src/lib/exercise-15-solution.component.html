@@ -1,0 +1,24 @@
+Exercise 15:
+<p>
+  An asteroid hunter fires many bullets to destroy an asteroid.
+  <br>
+  If each individual bullet is its own object that has all the information (like speed, direction, sprite, sound, etc)
+  then this can take up a lot of memory.
+  <br>Find a way to reduce the memory footprint of the game.
+</p>
+
+<div style="display: flex; gap: 10px;">
+  <button (click)="createBullet()">Fire Bullet</button>
+  <button (click)="changeFlyweight()">Update Flyweight</button>
+</div>
+@for (bullet of bullets; track bullet) {
+  <div>
+    <h3>Bullet</h3>
+
+    <p>Speed: {{ bullet.getSpeed() }}</p>
+    <p>Direction: {{ bullet.getDirection() }}</p>
+    <p>Sprite: {{ bullet.getSprite() }}</p>
+    <p>Sound: {{ bullet.getSounds() }}</p>
+
+  </div>
+}

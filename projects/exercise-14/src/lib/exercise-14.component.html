@@ -1,0 +1,13 @@
+<mat-label>How many asteroids would you like to generate</mat-label>
+<br>
+<mat-form-field>
+  <input matInput placeholder="100" [(ngModel)]="amount">
+</mat-form-field>
+&nbsp;
+<button mat-flat-button (click)="generate(amount)">Generate</button>
+<br>
+<ul>
+  @for (asteroid of asteroids; track asteroid) {
+    <li>{{ asteroid.name }}</li>
+  }
+</ul>

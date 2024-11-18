@@ -5,6 +5,9 @@
     "outDir": "./dist/out-tsc",
     "strict": true,
     "paths": {
+      "exercise-14": [
+        "./dist/exercise-14"
+      ],
       "exercise-14-solution": [
         "./dist/exercise-14-solution"
       ],

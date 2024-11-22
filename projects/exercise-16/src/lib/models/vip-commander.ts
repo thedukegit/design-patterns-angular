@@ -1,15 +1,18 @@
-export class VipCommander {
+import {TierInterface} from "./tier.interface";
+
+export class VipCommander implements TierInterface {
   private checkoutTotal: number = 0;
-  private discount: number = 10;
+  private discount = 10;
 
   public constructor(total: number) {
     this.checkoutTotal = total;
   }
 
-  public getTotal(specialDiscount?: number): number {
-    if (specialDiscount) {
-      return this.checkoutTotal * ((100 - specialDiscount) / 100);
-    }
-    return this.checkoutTotal * ((100 - this.discount) / 100);
+  public getTotal(): number {
+    return this.checkoutTotal;
+  }
+
+  public getDiscount(): number {
+    return this.discount;
   }
 }

@@ -7,6 +7,7 @@ import {ExerciseTemplateComponent} from '../../projects/exercise-template/src/li
 import {Exercise14Component} from "../../projects/exercise-14/src/lib/exercise-14.component";
 import {Exercise14SolutionComponent} from "../../projects/exercise-14-solution/src/lib/exercise-14-solution.component";
 import {Exercise15SolutionComponent} from "../../projects/exercise-15-solution/src/lib/exercise-15-solution.component";
+import {Exercise16Component} from "../../projects/exercise-16/src/lib/exercise-16.component";
 
 interface ComponentInterface {
   name: string;
@@ -48,6 +49,11 @@ export class AppComponent {
       name: 'Exercise 15 solution',
       component: Exercise15SolutionComponent,
       path: 'exercise-15-solution',
+    },
+    {
+      name: 'Exercise 16',
+      component: Exercise16Component,
+      path: 'exercise-16',
     },
   ];
   private readonly router: Router = inject(Router);

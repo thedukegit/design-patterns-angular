@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -47,5 +47,12 @@ export const routes: Routes = [
       import(
         '../../projects/exercise-16-solution/src/lib/exercise-16-solution.component'
         ).then((c) => c.Exercise16SolutionComponent),
+  },
+  {
+    path: 'exercise-17-solution',
+    loadComponent: () =>
+      import(
+        '../../projects/exercise-17-solution/src/lib/exercise-17-solution.component'
+        ).then((c) => c.Exercise17SolutionComponent),
   },
 ];

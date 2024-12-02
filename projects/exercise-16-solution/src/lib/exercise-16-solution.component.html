@@ -1,0 +1,31 @@
+Our main concern is calculating the discount (which is different for each tier). We would also like to have special discounts like “black Friday” and “summer sale” discounts.
+<br>
+These discounts then basically replace the discounts that is associated with a specific Tier, but are still different for each tier.
+<br>
+So for instance a Black Friday discount for WIP commander will be higher than one for a Basic commander
+<h1>vip commander</h1>
+10% discount on everything
+
+<h1> Basic commander</h1>
+5% discount on everything
+
+<h1> free loader</h1>
+no discount on anything
+
+<h1> Black Friday Discount </h1>
+15% discount for VIP, 7% for Basic, 2% for free loader
+<p>
+    <button mat-flat-button (click)="setDiscount('black-friday')">Set Black Friday discount</button>
+</p>
+<p>
+    <button mat-flat-button (click)="setDiscount('')">Reset discount</button>
+</p>
+<br>
+<br>
+<h1>Awesome skin, only 200</h1>
+<button mat-flat-button (click)="calculateSkin(200)">Calculate</button>
+
+<br>
+<br>
+<h2>Prices</h2>
+<pre>{{ prices | json }}</pre>

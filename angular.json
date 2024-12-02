@@ -252,6 +252,39 @@
           }
         }
       }
+    },
+    "exercise-16-solution": {
+      "projectType": "library",
+      "root": "projects/exercise-16-solution",
+      "sourceRoot": "projects/exercise-16-solution/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/exercise-16-solution/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/exercise-16-solution/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/exercise-16-solution/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/exercise-16-solution/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

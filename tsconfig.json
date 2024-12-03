@@ -20,6 +20,9 @@
       "exercise-16-solution": [
         "./dist/exercise-16-solution"
       ],
+      "exercise-17": [
+        "./dist/exercise-17"
+      ],
       "exercise-template": [
         "./dist/exercise-template"
       ]

@@ -1,0 +1,27 @@
+<ul>
+  <li>
+    <fleet-commander [fleetCommander]="fleetCommander"></fleet-commander>
+  </li>
+  <ul>
+    @for (taskForceCommander of fleetCommander.taskForceCommanders; track taskForceCommander.getName()) {
+      <li>
+        <task-force-commander [taskForceCommander]="taskForceCommander"></task-force-commander>
+      </li>
+
+      <ul>
+        @for (unitCommander of taskForceCommander.unitCommanders; track unitCommander.getName()) {
+          <li>
+            <unit-commander [unitCommander]="unitCommander"></unit-commander>
+          </li>
+          <ul>
+            @for (asteroidHunter of unitCommander.asteroidHunters; track asteroidHunter.getName()) {
+              <li>
+                <asteroid-hunter [asteroidHunter]="asteroidHunter"></asteroid-hunter>
+              </li>
+            }
+          </ul>
+        }
+      </ul>
+    }
+  </ul>
+</ul>

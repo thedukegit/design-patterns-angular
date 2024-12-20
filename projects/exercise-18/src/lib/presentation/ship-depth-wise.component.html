@@ -1,0 +1,6 @@
+<ul>
+  <li>{{ ship.getDescription() }}</li>
+  @for (ship of this.ship.getSubordinates(); track ship.getName()) {
+    <lib-depth-wise-ship [ship]="ship"></lib-depth-wise-ship>
+  }
+</ul>

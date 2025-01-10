@@ -69,4 +69,11 @@ export const routes: Routes = [
         '../../projects/exercise-18/src/lib/exercise-18.component'
         ).then((c) => c.Exercise18Component),
   },
+  {
+    path: 'exercise-18-solution',
+    loadComponent: () =>
+      import(
+        '../../projects/exercise-18-solution/src/lib/exercise-18-solution.component'
+        ).then((c) => c.Exercise18SolutionComponent),
+  },
 ];

@@ -31,7 +31,7 @@ export class Exercise18SolutionComponent implements OnInit {
   public ngOnInit(): void {
     const iterator = this.aggregator.createIterator();
     while (iterator.hasNext()) {
-      this.shipNames.push(iterator.next().name);
+      this.shipNames.push(iterator.next().getName());
       // console.log(iterator.next().name);
     }
   }

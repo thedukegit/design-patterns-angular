@@ -25,8 +25,12 @@ export class Iterator implements IteratorInterface {
     this.ships.push(ship)
   }
 
-  public next(): Ship | undefined {
-    return this.ships.shift();
+  public next(): Ship {
+    const ship = this.ships.shift();
+    if (ship) {
+      return ship;
+    }
+    throw new Error('No more ships');
   }
 
   public hasNext(): boolean {

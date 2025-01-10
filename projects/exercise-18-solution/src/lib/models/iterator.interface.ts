@@ -1,5 +1,7 @@
+import {Ship} from "../domain/ship/ship";
+
 export interface IteratorInterface {
-  next(): any;
+  next(): Ship;
 
   hasNext(): boolean;
 }

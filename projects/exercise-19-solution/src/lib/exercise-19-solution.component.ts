@@ -11,10 +11,10 @@ import {OrdinaryDay} from "./models/holiday-behaviour/ordinary-day";
   imports: [
     MatButton
   ],
-  templateUrl: './exercise-19.component.html',
+  templateUrl: './exercise-19-solution.component.html',
   styles: ``
 })
-export class Exercise19Component {
+export class Exercise19SolutionComponent {
   protected ship: Ship;
   protected button: Button;
 

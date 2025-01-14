@@ -2,15 +2,15 @@ import {HolidayBehaviourInterface} from "../holiday-behaviour.interface";
 import {Ship} from "../ship";
 
 export class NewYearsEve implements HolidayBehaviourInterface {
-  private ship: Ship;
+    private ship: Ship;
 
-  public constructor(ship: Ship) {
-    this.ship = ship;
+    public constructor(ship: Ship) {
+        this.ship = ship;
 
-  }
+    }
 
-  getIntoHolidaySpirit(): void {
-
-  }
+    public getIntoHolidaySpirit(): void {
+        this.ship.fireConfetti();
+    }
 
 }

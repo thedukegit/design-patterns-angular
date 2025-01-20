@@ -77,10 +77,10 @@ export const routes: Routes = [
         ).then((c) => c.Exercise18SolutionComponent),
   },
   {
-    path: 'exercise-19-solution',
+    path: 'exercise-19',
     loadComponent: () =>
       import(
-        '../../projects/exercise-19-solution/src/lib/exercise-19-solution.component'
-        ).then((c) => c.Exercise19SolutionComponent),
+        '../../projects/exercise-19/src/lib/exercise-19.component'
+        ).then((c) => c.Exercise19Component),
   },
 ];

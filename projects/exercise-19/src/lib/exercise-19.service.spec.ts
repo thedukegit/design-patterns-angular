@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 
-import {Exercise19SolutionService} from './exercise-19-solution.service';
+import {Exercise19SolutionService} from './exercise-19.service';
 
 describe('Exercise19Service', () => {
   let service: Exercise19SolutionService;

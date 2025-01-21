@@ -35,6 +35,9 @@
       "exercise-19": [
         "./dist/exercise-19"
       ],
+      "exercise-19-solution": [
+        "./dist/exercise-19-solution"
+      ],
       "exercise-template": [
         "./dist/exercise-template"
       ]

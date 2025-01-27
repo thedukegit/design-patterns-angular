@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Propulsion} from "./systems/propulsion";
 import {MatButton} from "@angular/material/button";
 
 @Component({
@@ -12,13 +11,9 @@ import {MatButton} from "@angular/material/button";
   styles: ``
 })
 export class Exercise20Component {
-  private readonly propulsion: Propulsion
 
-  public constructor() {
-    this.propulsion = new Propulsion()
-  }
 
-  protected startEngine(): void {
-    this.propulsion.start();
+  protected calculate(): void {
+    throw new Error('Not implemented yet');
   }
 }

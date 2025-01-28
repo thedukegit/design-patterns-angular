@@ -13,6 +13,8 @@ import {Exercise17Component} from "../../projects/exercise-17/src/lib/exercise-1
 import {Exercise17SolutionComponent} from "../../projects/exercise-17-solution/src/lib/exercise-17-solution.component";
 import {Exercise18Component} from "../../projects/exercise-18/src/lib/exercise-18.component";
 import {Exercise18SolutionComponent} from "../../projects/exercise-18-solution/src/lib/exercise-18-solution.component";
+import {Exercise19Component} from "../../projects/exercise-19/src/lib/exercise-19.component";
+import {Exercise19SolutionComponent} from "../../projects/exercise-19-solution/src/lib/exercise-19-solution.component";
 import {Exercise20Component} from "../../projects/exercise-20/src/lib/exercise-20.component";
 
 interface ComponentInterface {
@@ -85,6 +87,16 @@ export class AppComponent {
       name: 'Exercise 18 solution',
       component: Exercise18SolutionComponent,
       path: 'exercise-18-solution',
+    },
+    {
+      name: 'Exercise 19',
+      component: Exercise19Component,
+      path: 'exercise-19',
+    },
+    {
+      name: 'Exercise 19 solution',
+      component: Exercise19SolutionComponent,
+      path: 'exercise-19-solution',
     },
     {
       name: 'Exercise 20',

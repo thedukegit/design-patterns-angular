@@ -1,5 +1,15 @@
-<h1>Implement a calculator that accepts strings</h1>
+<h1>Implement a string based calculator</h1>
 
+<p>Our imaginary shop runs on the currencies: (MOON) STONES, (BOTTLE) CAPS and RUBIES.
+  <br>But now we find ourselves in need of a CONVERSION CALCULATOR!</p>
+<mat-form-field style="width: 14em">
+  <mat-label>Enter something</mat-label>
+  <input [(ngModel)]="prompt" matInput placeholder="Enter something">
+  <mat-hint>Example: 12 STONES to CAPS</mat-hint>
+</mat-form-field>
+<br>
+<br>
 <button (click)="calculate()" color="primary" mat-flat-button>Calculate</button>
+{{ result }}
 
 

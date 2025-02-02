@@ -97,4 +97,11 @@ export const routes: Routes = [
         '../../projects/exercise-20/src/lib/exercise-20.component'
         ).then((c) => c.Exercise20Component),
   },
+  {
+    path: 'exercise-20-solution',
+    loadComponent: () =>
+      import(
+        '../../projects/exercise-20-solution/src/lib/exercise-20-solution.component'
+        ).then((c) => c.Exercise20SolutionComponent),
+  },
 ];

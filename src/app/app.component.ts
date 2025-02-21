@@ -18,6 +18,7 @@ import {Exercise19SolutionComponent} from "../../projects/exercise-19-solution/s
 import {Exercise20Component} from "../../projects/exercise-20/src/lib/exercise-20.component";
 import {Exercise20SolutionComponent} from "../../projects/exercise-20-solution/src/lib/exercise-20-solution.component";
 import {Exercise21Component} from "../../projects/exercise-21/src/lib/exercise-21.component";
+import {Exercise21SolutionComponent} from "../../projects/exercise-21-solution/src/lib/exercise-21-solution.component";
 
 interface ComponentInterface {
   name: string;
@@ -114,6 +115,11 @@ export class AppComponent {
       name: 'Exercise 21',
       component: Exercise21Component,
       path: 'exercise-21',
+    },
+    {
+      name: 'Exercise 21 solution',
+      component: Exercise21SolutionComponent,
+      path: 'exercise-21-solution',
     },
   ];
   private readonly router: Router = inject(Router);
